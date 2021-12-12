@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel src/index.html",
+    "dev": "parcel src/index.html --public-url ./public",
     "build": "parcel build src/index.html",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet"
@@ -32,10 +32,6 @@
   },
   "browserslist": [
     "last 2 Chrome versions"
-  ],
-  "targets": {
-    "default": {
-      "distDir": "./build"
-    }
-  }
+  ]
+
 }
