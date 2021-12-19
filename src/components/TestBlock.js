@@ -27,7 +27,13 @@ const TestBlock = (props) => {
         </div>
         <div className="testblock-label-time-container">
           <img src={time} alt="questionmark" />
-          <h5>{props.time}</h5>
+          {(() => {
+            if (props.time > 0) {
+              return <h5>{props.time} min.</h5>;
+            } else {
+              return <h5>Neribotas</h5>;
+            }
+          })()}
         </div>
         <div className="testblock-label-flag-container">
           <img src={flag} alt="questionmark" />
