@@ -20,6 +20,7 @@ const TestBlockManager = () => {
             title={test.name}
             description={test.description}
             category_id={test.fk_category}
+            time={test.time}
           />
         );
       })}
