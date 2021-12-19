@@ -3,7 +3,8 @@ import avatar from "../images/avatar.png";
 import questionmark from "../images/question.svg";
 import timeImage from "../images/time.svg";
 import flag from "../images/flag.svg";
-import { useEffect, useState } from "react/cjs/react.development";
+// Did it worked?
+import { useEffect, useState } from "react";
 
 const TestBlock = (props) => {
   const [category, setCategory] = useState([]);
