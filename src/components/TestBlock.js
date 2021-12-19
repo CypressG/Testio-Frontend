@@ -3,10 +3,11 @@ import avatar from "../images/avatar.png";
 import questionmark from "../images/question.svg";
 import timeImage from "../images/time.svg";
 import flag from "../images/flag.svg";
-import { useEffect, useState } from "react/cjs/react.development";
+// Did it worked?
+import { useEffect, useState } from "react";
 
 const TestBlock = (props) => {
-  const [category, setCategory] = useState("ss");
+  const [category, setCategory] = useState([]);
 
   let count = props.question_count;
   if (count <= 0) {
@@ -15,15 +16,12 @@ const TestBlock = (props) => {
 
   let time = props.time;
   if (time <= 0) {
-    time = "Neribota"
+    time = "Neribota";
+  } else {
+    time = `${props.time} min.`;
   }
-  else {
-    time = `${props.time} min.`
-  }
 
-  let progress = props.progress + "%"
-
-
+  let progress = props.progress + "%";
 
   useEffect(() => {
     fetch(
