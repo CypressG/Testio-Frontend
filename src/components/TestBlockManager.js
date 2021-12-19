@@ -17,10 +17,12 @@ const TestBlockManager = () => {
         return (
           <TestBlock
             key={test.id}
-            title={test.name}
+            title={test.title}
             description={test.description}
             category_id={test.fk_category}
             time={test.time}
+            question_count={test.question_count}
+            progress = {test.progress}
           />
         );
       })}

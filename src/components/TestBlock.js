@@ -1,12 +1,29 @@
 import photo from "../images/test_background.jpg";
 import avatar from "../images/avatar.png";
 import questionmark from "../images/question.svg";
-import time from "../images/time.svg";
+import timeImage from "../images/time.svg";
 import flag from "../images/flag.svg";
 import { useEffect, useState } from "react/cjs/react.development";
 
 const TestBlock = (props) => {
   const [category, setCategory] = useState("ss");
+
+  let count = props.question_count;
+  if (count <= 0) {
+    count = "Nėra";
+  }
+
+  let time = props.time;
+  if (time <= 0) {
+    time = "Neribota"
+  }
+  else {
+    time = `${props.time} min.`
+  }
+
+  let progress = props.progress + "%"
+
+
 
   useEffect(() => {
     fetch(
@@ -23,21 +40,15 @@ const TestBlock = (props) => {
       <div className="testblock-label-container">
         <div className="testblock-label-questionmark-container">
           <img src={questionmark} alt="questionmark" />
-          <h5>30</h5>
+          <h5>{count}</h5>
         </div>
         <div className="testblock-label-time-container">
-          <img src={time} alt="questionmark" />
-          {(() => {
-            if (props.time > 0) {
-              return <h5>{props.time} min.</h5>;
-            } else {
-              return <h5>Neribotas</h5>;
-            }
-          })()}
+          <img src={timeImage} alt="questionmark" />
+          <h5>{time}</h5>
         </div>
         <div className="testblock-label-flag-container">
           <img src={flag} alt="questionmark" />
-          <h5>{props.progress}</h5>
+          <h5>{progress}</h5>
         </div>
       </div>
 
