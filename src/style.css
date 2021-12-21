@@ -470,6 +470,8 @@ html {
 
 /* Avatar */
 .avatar-container {
+  display: flex;
+  
 }
 
 /* Description*/
