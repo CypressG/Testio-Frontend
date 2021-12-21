@@ -486,3 +486,25 @@ html {
   color: red;
 }
 /* Description*/
+
+.hr-page-divider {
+  border: 1px solid #807182;
+}
+
+.description-labels-container-username :nth-child(odd) {
+  color: #22b573;
+}
+
+.description-labels-container-email :nth-child(odd) {
+  color: #22b573;
+}
+
+.description-labels-container-birthday :nth-child(odd) {
+  color: #22b573;
+}
+
+.description-container h3 {
+  color: #22b573;
+  font-size: 16px;
+}
+
