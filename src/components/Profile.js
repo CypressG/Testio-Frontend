@@ -5,8 +5,11 @@ const Profile = () => {
     <div className="profile-container">
       {/* <Avatar /> */}
       <Description
-        username="Petras Petrauskas"
+        name_surname="Petras Petrauskas"
         user_status="Vartotojas"
+        username="petriukas"
+        email="petriukas.petraitis@gmail.com"
+        birthday="2000-00-00"
       />
     </div>
   );
