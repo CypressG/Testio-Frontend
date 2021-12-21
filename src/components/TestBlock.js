@@ -3,6 +3,9 @@ import avatar from "../images/avatar.png";
 import questionmark from "../images/question.svg";
 import timeImage from "../images/time.svg";
 import flag from "../images/flag.svg";
+
+import Button from "../components/Button";
+
 // Did it worked?
 import { useEffect, useState } from "react";
 
@@ -62,8 +65,8 @@ const TestBlock = (props) => {
         <h2>{props.title}</h2>
         <p>{props.description}</p>
         <div className="testblock-button-container">
-          <button className="main-button">Spręsti</button>
-          <button className="extra-button">Daugiau</button>
+          <Button text="Spręsti" fill={true} />
+          <Button text="Daugiau" fill={false} />
         </div>
       </div>
     </div>

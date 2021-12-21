@@ -471,19 +471,65 @@ html {
 /* Avatar */
 .avatar-container {
   display: flex;
-  height: 500px;
   flex-flow: column;
-  width: 500px;
-}
-.avatar-image-container img {
-  height: 500px;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 100%;
 }
 
 .avatar-image-container {
-  color: red;
+  height: 10rem;
+  width: 10rem;
+  position: relative;
+  margin: auto;
+}
+.avatar-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.avatar-image-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  border-radius: 50%;
+  background-color: rgb(31, 170, 107);
+  opacity: 0;
+}
+
+.avatar-image-overlay:hover {
+  opacity: 0.7;
+  background-image: url("./images/union.svg");
+  background-size: 6rem;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.profile-container {
+  display: flex;
+  flex-flow: column wrap;
+}
+.avatar-container {
+  flex-basis: 30%;
+}
+.description-container {
+  flex-basis: 70%;
+}
+.profile-button-container button {
+  width: 50%;
+  margin: auto;
+}
+
+@media (min-width: 900px) {
+  .avatar-image-container {
+    height: 20rem;
+    width: 20rem;
+  }
+  .profile-container {
+    flex-flow: row wrap;
+  }
+  .profile-button-container {
+    flex-basis: 30%;
+  }
 }
 /* Description*/
 
@@ -492,7 +538,7 @@ html {
 }
 
 .description-labels-container div p:nth-child(odd) {
-  color: #22b573;
+  color: rgb(31, 170, 107);
 }
 
 .description-container h3 {

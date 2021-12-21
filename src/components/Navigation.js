@@ -1,5 +1,4 @@
 import avatar from "../images/avatar.svg";
-
 const Navigation = (props) => {
   return (
     <div id="navbar-container">
