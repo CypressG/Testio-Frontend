@@ -1,10 +1,11 @@
+import Avatar from "./Avatar";
+import Description from "./Description";
 const Profile = () => {
   return (
     <div>
-      <h1>Here goes Avatar</h1>
-      <h1>Here goes Description</h1>
+      <Avatar />
+      <Description />
     </div>
   );
 };
 export default Profile;
-
