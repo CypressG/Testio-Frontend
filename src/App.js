@@ -1,27 +1,19 @@
 import ReactDOM from "react-dom";
-import logo from "./images/logo.png";
-import {
-  TestBlockManager,
-  Footer,
-  SearchBar,
-  Navigation,
-  BottomCreate,
-} from "./components/index";
+import Home from "./components/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+const Test = () => {
+  return <h1>Sdarof pacani</h1>;
+};
 
 const App = () => {
   return (
-    <div>
-      <div id="website-container">
-        <Navigation name="Testio" img={logo} user="Petras" />
-        <SearchBar
-          title="Testų kūrimo ir spendimo sistema"
-          description="Kurkite, spręskite ir dalinkitės įvairiausiais testais, kontroliniais darbais ir klausimynais vienoje vietoje"
-        ></SearchBar>
-        <TestBlockManager />
-      </div>
-      <BottomCreate />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/test" element={<Test />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
 
