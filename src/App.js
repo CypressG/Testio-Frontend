@@ -1,17 +1,14 @@
 import ReactDOM from "react-dom";
 import Home from "./components/Home";
+import Profile from "./components/Profile";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-const Test = () => {
-  return <h1>Sdarof pacani</h1>;
-};
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/test" element={<Test />}></Route>
+        <Route path="/profile" element={<Profile />}></Route>
       </Routes>
     </BrowserRouter>
   );
