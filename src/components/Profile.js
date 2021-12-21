@@ -1,10 +1,13 @@
-import Avatar from "./Avatar";
+// import Avatar from "./Avatar";
 import Description from "./Description";
 const Profile = () => {
   return (
-    <div>
-      <Avatar />
-      <Description />
+    <div className="profile-container">
+      {/* <Avatar /> */}
+      <Description
+        username="Petras Petrauskas"
+        user_status="Vartotojas"
+      />
     </div>
   );
 };
