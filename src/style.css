@@ -471,7 +471,18 @@ html {
 /* Avatar */
 .avatar-container {
   display: flex;
-  
+  height: 500px;
+  flex-flow: column;
+  width: 500px;
+}
+.avatar-image-container img {
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 100%;
 }
 
+.avatar-image-container {
+  color: red;
+}
 /* Description*/

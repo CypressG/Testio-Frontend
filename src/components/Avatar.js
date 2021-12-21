@@ -3,7 +3,9 @@ import Button from "./Button";
 const Avatar = () => {
   return (
     <div className="avatar-container">
-      <img src={profile} alt="avatar"></img>
+      <div className="avatar-image-container">
+        <img src={profile} alt="profile"></img>
+      </div>
       <Button />
     </div>
   );
